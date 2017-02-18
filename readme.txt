@@ -7,6 +7,7 @@ FEATURES SUPPORTED
 The shell supports cd,pwd,echo and other built in commands.
 Errors are handled properly using perror.
 Echo command is not the same as in the bash shell.
+Pipes and redirection can be used as in BASH.
 
 
 HOW TO COMPILE
