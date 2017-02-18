@@ -13,21 +13,21 @@
 //function to replace home directory by ~
 char *replace_str(char *str, char *orig, char *rep)
 {
-  static char buffer[4096];
-  char *p;
+	static char buffer[4096];
+	char *p;
 
-  if(!(p = strstr(str, orig)))  
-    {
-    strcpy(buffer,str);
-    return buffer;
-  } 
+	if(!(p = strstr(str, orig)))  
+	{
+		strcpy(buffer,str);
+		return buffer;
+	} 
 
-  strncpy(buffer, str, p-str); 
-  buffer[p-str] = '\0';
+	strncpy(buffer, str, p-str); 
+	buffer[p-str] = '\0';
 
-  sprintf(buffer+(p-str), "%s%s", rep, p+strlen(orig));
+	sprintf(buffer+(p-str), "%s%s", rep, p+strlen(orig));
 
-  return buffer;
+	return buffer;
 }
 
 //prints the shell initials
